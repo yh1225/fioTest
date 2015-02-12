@@ -1,0 +1,33 @@
+randwrite_4k_64: (g=0): rw=randwrite, bs=4K-4K/4K-4K, ioengine=sync, iodepth=1
+...
+randwrite_4k_64: (g=0): rw=randwrite, bs=4K-4K/4K-4K, ioengine=sync, iodepth=1
+fio 2.0.7
+Starting 64 processes
+randwrite_4k_64: Laying out IO file(s) (10 file(s) / 409600MB)
+
+randwrite_4k_64: (groupid=0, jobs=64): err= 0: pid=24101
+  write: io=410768MB, bw=233673KB/s, iops=58418 , runt=1800060msec
+    clat (usec): min=53 , max=2064.1K, avg=1091.34, stdev=12614.35
+     lat (usec): min=53 , max=2064.1K, avg=1091.94, stdev=12614.36
+    clat percentiles (usec):
+     |  1.00th=[  181],  5.00th=[  217], 10.00th=[  241], 20.00th=[  294],
+     | 30.00th=[  366], 40.00th=[  458], 50.00th=[  580], 60.00th=[  740],
+     | 70.00th=[  972], 80.00th=[ 1336], 90.00th=[ 1944], 95.00th=[ 2448],
+     | 99.00th=[ 3408], 99.50th=[ 3984], 99.90th=[23936], 99.95th=[59648],
+     | 99.99th=[806912]
+    bw (KB/s)  : min=    2, max=16744, per=1.70%, avg=3971.25, stdev=1227.06
+    lat (usec) : 100=0.01%, 250=11.82%, 500=31.96%, 750=16.62%, 1000=10.54%
+    lat (msec) : 2=19.64%, 4=8.92%, 10=0.28%, 20=0.11%, 50=0.05%
+    lat (msec) : 100=0.02%, 250=0.01%, 500=0.01%, 750=0.01%, 1000=0.01%
+    lat (msec) : 2000=0.01%, >=2000=0.01%
+  cpu          : usr=0.51%, sys=5.78%, ctx=199379121, majf=0, minf=2153
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=105156509/d=0, short=r=0/w=0/d=0
+
+Run status group 0 (all jobs):
+  WRITE: io=410768MB, aggrb=233673KB/s, minb=233673KB/s, maxb=233673KB/s, mint=1800060msec, maxt=1800060msec
+
+Disk stats (read/write):
+  sdb: ios=12/129340206, merge=0/78918, ticks=7/221191283, in_queue=221004065, util=97.01%
